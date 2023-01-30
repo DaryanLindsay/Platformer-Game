@@ -50,8 +50,8 @@ class FPlayer extends FBox {
       direction = R;
     }
 
-    if (wkey) {
-      setVelocity(vx, -300);
+    if (wkey && isTouching("brick") || isTouching("wall") || isTouching("ice") || isTouching("bridge")) {
+      setVelocity(vx, -500);
     }
 
     if (abs(vy) > 0.1) {
@@ -79,5 +79,15 @@ class FPlayer extends FBox {
         mode = VICTORY;
       }
     }
+  }
+   boolean isTouching(String n) {
+    ArrayList<FContact> contacts = getContacts();
+    for (int i = 0; i < contacts.size(); i++) {
+      FContact fc = contacts.get(i);
+      if (fc.contains(n)) {
+        return true;
+      }
+    }
+    return false;
   }
 }

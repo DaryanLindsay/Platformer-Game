@@ -32,6 +32,7 @@ class FHammerbro extends FGameObject {
       direction *= - 1;
       setPosition(getX()+direction, getY()-gridSize/2);
       throwHammer();
+      throwHammer();
     }
     if (isTouching("player")) {
       if ( player.getY() < getY()) {

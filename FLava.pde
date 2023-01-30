@@ -4,7 +4,6 @@ class FLava extends FGameObject {
   FLava(int x, int y) {
     super();
     setPosition(x, y);
-    setName("bridge");
     setStatic(true);
     setStatic(true);
     setFriction(10);

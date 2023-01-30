@@ -50,8 +50,8 @@ class FPlayer extends FBox {
       direction = R;
     }
 
-    if (wkey && isTouching("brick") || isTouching("wall") || isTouching("ice") || isTouching("bridge")) {
-      setVelocity(vx, -500);
+    if (wkey && isTouching("brick") || wkey && isTouching("wall") || wkey &&  isTouching("ice") || wkey && isTouching("bridge")) {
+      setVelocity(vx, -350);
     }
 
     if (abs(vy) > 0.1) {
@@ -75,7 +75,7 @@ class FPlayer extends FBox {
         setPosition(0, 0);
         playerlives--;
       }
-      if (fc.contains("victory")) {
+      if (fc.contains("victory") && getY() < 280) {
         mode = VICTORY;
       }
     }

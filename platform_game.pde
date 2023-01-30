@@ -303,6 +303,14 @@ void game() {
   text("LIVES: " + playerlives, 80, 80);
   drawWorld();
   actWorld();
+  
+  
+  ////quordinates
+  //fill(red);
+  //textSize(20);
+  //if (mouseX < width - 150) {
+  //  text(mouseX + ", " + mouseY, mouseX, mouseY - 20);
+  //}
 
   if (playerlives <= 0) {
     mode = GAMEOVER;
